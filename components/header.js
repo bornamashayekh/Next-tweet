@@ -1,11 +1,14 @@
 import logo from '@/assets/logo.png';
 import Link from 'next/link';
-
+import Image from 'next/image';
 export default function Header() {
   return (
     <header id="main-header">
       <Link href="/">
-        <img src={logo.src} alt="Mobile phone with posts feed on it" />
+        <Image src={logo}
+        // sizes='10vw' 
+          priority // disable lazy loading
+          alt="Mobile phone with posts feed on it" />
       </Link>
       <nav>
         <ul>
